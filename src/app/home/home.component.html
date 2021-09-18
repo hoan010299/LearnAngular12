@@ -3,7 +3,6 @@
   <h2>Chào bạn {{ name }}</h2>
   <input value="{{ name }}" />
   <br />
-  <input [value]="name" title="đây là {{ name }}" />
-  <br />
-  <input [value]="name" [title]="'đây là' +name" />
+  <h2 *ngIf="age > 18">Bạn quá già !</h2>
+  <h2 *ngIf="age <= 15">Bạn quá trẻ !</h2>
 </div>
