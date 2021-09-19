@@ -1,15 +1,22 @@
 <div class="test">
   <h3>Đây là component Home</h3>
-  <br />
-  <input type="text" [(ngModel)]="age" />
-  <h3>Tuổi bạn là {{ age }}</h3>
-  <br />
-  <!-- <h2 *ngIf="age > 18">Bạn quá già !</h2>
-  <h2 *ngIf="age <= 15">Bạn quá trẻ !</h2> -->
-  <div *ngIf="age <= 18; then tre; else gia"></div>
-  <ng-template #tre>Bạn còn trẻ!</ng-template>
-  <ng-template #gia>Bạn đã già rồi</ng-template>
-
-  <br />
-  <button (click)="resetAge()">Reset Age</button>
+  <h1>Trái Cây</h1>
+  <table class="table">
+    <tr>
+      <th>Thứ Tự:</th>
+      <th>Name:</th>
+      <th>Price:</th>
+      <th>Đại Hạ Giá:</th>
+    </tr>
+    <tr *ngFor="let trai of traiCay; let i = index">
+      <td>{{ i + i }}</td>
+      <td>{{ trai.name }}</td>
+      <td class="right">
+        <span [ngClass]="{ 'so-am': trai.price < 0 }">{{ trai.price }}</span>
+      </td>
+      <td class="center">
+        <span *ngIf="trai.haGia">Đang hạ giá !</span>
+      </td>
+    </tr>
+  </table>
 </div>
