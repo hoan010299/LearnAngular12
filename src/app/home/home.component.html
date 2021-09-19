@@ -1,8 +1,15 @@
 <div class="test">
   <h3>Đây là component Home</h3>
-  <h2>Chào bạn {{ name }}</h2>
-  <input value="{{ name }}" />
   <br />
-  <h2 *ngIf="age > 18">Bạn quá già !</h2>
-  <h2 *ngIf="age <= 15">Bạn quá trẻ !</h2>
+  <input type="text" [(ngModel)]="age" />
+  <h3>Tuổi bạn là {{ age }}</h3>
+  <br />
+  <!-- <h2 *ngIf="age > 18">Bạn quá già !</h2>
+  <h2 *ngIf="age <= 15">Bạn quá trẻ !</h2> -->
+  <div *ngIf="age <= 18; then tre; else gia"></div>
+  <ng-template #tre>Bạn còn trẻ!</ng-template>
+  <ng-template #gia>Bạn đã già rồi</ng-template>
+
+  <br />
+  <button (click)="resetAge()">Reset Age</button>
 </div>
