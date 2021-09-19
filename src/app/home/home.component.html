@@ -12,12 +12,12 @@
       <td>
         {{ i + 1 }}
       </td>
-      <td>{{ trai.name }}</td>
+      <td>{{ trai.name | uppercase }}</td>
       <td class="right">
-        <span [ngClass]="{ 'so-am': trai.price < 0 }">{{ trai.price }}</span>
+        <span [ngClass]="{ 'so-am': trai.price < 0 }">{{ trai.price | currency : "VND" :"symbol":"1.3"}}</span>
       </td>
       <td class="center">
-        <span *ngIf="trai.haGia">Đang hạ giá !</span>
+        <span>{{trai.haGia | onSale |uppercase}}</span>
       </td>
     </tr>
   </table>
