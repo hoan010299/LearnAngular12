@@ -7,7 +7,7 @@ import { CommonService } from '../Services/common.service';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit {
-  public loginName = 'admin';
+  public loginName = 'usern';
   public myColor = 'red';
   public Color = 'orange';
   public counter = 0;
