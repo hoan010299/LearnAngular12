@@ -14,6 +14,7 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { GetDataComponent } from './get-data/get-data.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { GetDataComponent } from './get-data/get-data.component';
     TemplateDrivenFormComponent,
     ReactiveFormComponent,
     GetDataComponent,
+
   ],
   imports: [
     BrowserModule,
